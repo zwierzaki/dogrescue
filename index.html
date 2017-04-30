@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="windows-1250">
+<meta property="og:url"                content="http://dogrescue.zwierzaki.info" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="Adoptuj Psiaka, Adoptuj Kociaka - Dog Rescue" />
+<meta property="og:description"        content="Adoptuj psiego lub kociego przyjaciela, najlepszego na świecie. Podopieczni Stowarzyszenia Dog Rescue polecają się." />
+<meta property="og:image"              content="http://dogrescue.zwierzaki.info/logo.jpg" />
+<link rel="icon" href="http://dogrescue.zwierzaki.info/logo.png">
+<meta name="description" content="Adoptuj psiego lub kociego przyjaciela, najlepszego na świecie. Podopieczni Stowarzyszenia Dog Rescue polecają się.">
+    <!-- <meta name="viewport" content="width=auto, initial-scale=1.0, minimum-scale=1.0" /> -->
+    <title>Adoptuj Zwierzaka - Stowarzyszenie Dog Rescue</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="lib/normalize-css/normalize.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/fontello.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="search">
+          <i class="icon-search"></i>
+          <input type="search" placeholder="Jakiego zwierzaka szukasz?" />
+          <div class="dropdown">
+            <div class="dd-header">Przykład</div>
+            <ul class="examples">
+              <li>radosny pies</li>
+              <li>łagodna suczka</li>
+              <li>spokojna kotka</li>
+            </ul>
+          </div>
+        </div>
+        <div class="user">
+          <div class="avatar"></div>
+          <i class="icon-down-open"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div id="pets">
+      <div class="container">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      Adoptuj Psiaka, Adoptuj Kociaka 2017 - Stworzyli wolontariusze <a href="http://dogrescue.pl">Stowarzyszenia Dog Rescue</a> 
+    </footer>
+
+    <!-- Handlebars Templates -->
+    <script type="text/x-handlebars-template" id="pet-list">
+      {{#each pets}}
+        <div class="card" data-tags="{{tags}}" data-rank="0">
+          <div class="image" style="background-image: url('{{image_url}}');"></div>
+          <div class="summary">
+            <div class="name">{{name}}</div>
+            <div class="description">
+              <span class="breed">{{breed}}</span>
+              <span class="bullet">&bull;</span>
+              <span class="age">{{age}}</span>
+              <span class="bullet">&bull;</span>
+              <span class="gender">{{gender}}</span><br>
+			  <span class="gender"><a href="{{facebook}}" target="_blank">galeria</a></span>
+			  <!-- <span class="bullet">&bull;</span>
+			  <span class="gender"><a href="{{omnie}}" target="_blank">o mnie</a></span> -->
+			  
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </script>
+
+    <!-- JS -->
+    <script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="lib/handlebars/handlebars.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+  </body>
+</html>
